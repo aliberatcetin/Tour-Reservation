@@ -1,0 +1,86 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="mb-5">
+            <div class="row">
+
+                <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formRegister"></span>
+                    <hr class="mb-5">
+                    <div class="container">
+                        {{> _msg}} {{> _errors}}
+                    </div>
+                    <!-- form card register -->
+                    <div class="card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Add Category</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" method="post" action="/categories" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="inputName">Category Name</label>
+                                    <input type="text" class="form-control" name="name" id="inputName" placeholder="Full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputName">Display Name</label>
+                                    <input type="text" class="form-control" name="headerDisplay" id="inputDisplayName" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputName">Category Name</label>
+
+                                    <input type="file" id="input-file-now" name="file" class="file-upload" />
+                                </div>
+
+
+                                <!--<div class="form-group">
+                                    <label for="inputEmail3">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputVerify3">Verify</label>
+                                    <input type="password" class="form-control" id="inputVerify3" placeholder="Password (again)" required="">
+                                </div>-->
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg float-right">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /form card register -->
+
+                </div>
+
+
+            </div>
+            <!--/row-->
+
+            <br><br><br><br>
+
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+    <hr>
+    <p class="text-center">The End.<br>
+        <a class="small text-info d-inline-block" href="https://www.codeply.com/bootstrap-4-examples">More Bootstrap 4
+            Examples</a>
+    </p>
+
+</div>
+<!--/container-->
+
+<style>
+    .form-control {
+        background-color: lightgray;
+    }
+
+    .form-control:focus {
+        background-color: white;
+        color: black;
+    }
+</style>

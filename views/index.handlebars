@@ -1,0 +1,449 @@
+<!-- End section 1-->
+<style>
+    #destinationLabel {
+        font-size: 12px;
+    }
+</style>
+<section id="sectioncarousel">
+    <div id="carouselExampleIndicators" class="carousel carousel-home2  slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img class="d-block img-fluid" src="assets/images/balat.jpg" alt="Third slide">
+                <div class="carousel-caption justify-content-center  mb-lg-4 mb-0 align-items-center text-center">
+                    <div class="toggleCaption">
+                        <h1 class="white shadow-text align-middle">Balat</h1>
+                    </div>
+                    <div class="toggleButton">
+                        <h4 class="white shadow-text align-middle">Hidden treasures of Istanbul</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="assets/images/cappadocia.jpg" alt="First slide">
+                <div class="carousel-caption justify-content-center  mb-lg-4 mb-0 align-items-center text-center">
+                    <div class="toggleCaption">
+                        <h1 class="white shadow-text  align-middle">Cappadocia</h1>
+                    </div>
+                    <div class="toggleButton">
+                        <h4 class="white shadow-text align-middle">Land of Beautiful Horses</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="assets/images/ayasofya.jpg" alt="Second slide">
+                <div class="carousel-caption justify-content-center  mb-lg-4 mb-0 align-items-center text-center">
+                    <div class="toggleCaption">
+                        <h1 class="white shadow-text  align-middle">Istanbul</h1>
+                    </div>
+                    <div class="toggleButton">
+                        <h4 class="white shadow-text align-middle">Capital of Empires</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="assets/images/ephesus2.jpg" alt="Third slide">
+                <div class="carousel-caption justify-content-center  mb-lg-4 mb-0 align-items-center text-center">
+                    <div class="toggleCaption">
+                        <h1 class="white shadow-text align-middle">Ephesus</h1>
+                    </div>
+                    <div class="toggleButton">
+                        <h4 class="white shadow-text align-middle">Birth Place of Civilization</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+</section>
+
+<section id="section-masonry">
+
+    <div class="container">
+        <h2 class="black front">Popular Tours</h2>
+
+        <div class="row mb-5">
+            <div class="col-sm-9 front">
+                <div class="separator "></div>
+                <h5 class="primary-color section-title ">Find the one that suits you best </h5>
+            </div>
+
+            <div class="col-sm-3 front my-auto">
+                <a class="btn btn-primary   mt-2 px-5 py-2" href="/tours" role="button">See More</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container destination-section">
+        <div class="row">
+            {{#each populars}}
+            <div class="col-xs-12 col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <small class="white front"><span
+                            class="far fa-clock mr-2 white"></span><strong>{{numerical}}</strong><br>{{duration}}</small>
+                    <a class="img-card" href="/tours/{{categoryName}}/{{name}}">
+                        <img src="assets/images/{{thumbnailImage}}" alt="" />
+                    </a>
+                    <div class="card-content">
+                        <div>
+                            <a class="btn btn-primary px-3 btn-sm float-left" href="javascript:void()"
+                                role="button">popular</a>
+                        </div>
+                        <h6 class="primary-color text-right">{{price}}</h6>
+                        <h6 class="black"><a href="/tours/{{categoryName}}/{{name}}">{{displayName}}</a></h6>
+                        <!--<p class="">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id ligula aliquam, malesuada ex ac, auctor ni <a href="#" target="_blank"><span>... See more</span></a>
+                                    </p>-->
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="section-newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center bold mb-5"> Why Choose Us</h4>
+            </div>
+
+            <div class="col-lg-4 col-12 order-1 order-lg-1 mx-auto">
+                <img style="width:150px;height:150px; " class="svgcenter worldclass mb-2"
+                    src="assets/images/turkeyicon.png" alt="">
+            </div>
+
+            <div class="col-lg-4 col-12 order-3 order-lg-2 mx-auto">
+                <img style="width:120px;height:120px; " class="svgcenter lovetravel mt-5 mt-lg-3  mb-2"
+                    src="assets/images/lighthouseicon.png" alt="">
+            </div>
+
+            <div class="col-lg-4 col-6 order-5 order-lg-3 mx-auto">
+                <img style="width:150px;height:150px; " class="svgcenter parisicon mt-5 mt-lg-0 mb-2"
+                    src="assets/images/balloonicon.png" alt="">
+            </div>
+
+            <div class="col-lg-4 col-12 order-2 order-lg-4">
+                <h6 class="mt-3 text-center">Private Turkey Tours</h6>
+                <p class="pt-1 px-4 mb-0  black text-justify">
+                    Expert of local Turkey tourism industry and experience of 10 years will give you a better
+                    opportunity for your Turkey trip.
+                </p>
+            </div>
+            <div class="col-lg-4 col-12 order-4 order-lg-5">
+                <h6 class="mt-3 text-center">Local Tour Guides</h6>
+                <p class="pt-1 px-4 mb-0 black text-justify">
+                    With the accompany of your local tour guides you can enjoy the highlights of Turkey with language
+                    options of English, Spanish, Porteguese, Italian and German.
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-12 order-6 order-lg-6">
+                <h6 class="mt-3 text-center">Most Popular Destinations</h6>
+                <p class="pt-1 px-4 mb-0 black text-justify">
+                    We provide high quality travel service in every popular destination of Turkey from west to east for
+                    our dearest guests.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<div id="sectionvideo"
+    class="videohome2 container img-fluid w-100 text-center justify-content-center align-items-center">
+
+    <div class="row videooverlay">
+
+        <div class="col-xl-7 col-12  white">
+            <a class="popup-vimeo" href="https://www.youtube.com/watch?v=z7yqtW4Isec">
+                <img src="assets/images/istanbulbosphorus.jpg" class="img-fluid video-call" alt="">
+                <div class="play-center">
+                    <i class="far fa-7x fa-play-circle front"></i>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-xl-5 col-12  mx-auto row align-items-center mt-xl-0 mt-5">
+            <div class="block-transform  py-5 px-4">
+                <h4 class="black mx-2  text-center d-block">Travel Around Turkey</h4>
+                <p class="black text-block px-sm-5 text-justify px-3">Stroll through Istanbul, Cappdocia, Ephesus,
+                    Pamukkale and other popular touristic destinations of Turkey with accompany of our professional
+                    team. Enjoy the perfect combination of nature and history in the cradle of civilizations. </p>
+                <!--<a href="/" class="btn  px-4 my-3 btn-primary">Instagram</a>-->
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Newsletter -->
+<div
+    class="newsletterhome2 img-fluid w-100 text-center justify-content-center mb-md-0 mb-5 mt-md-0 mt-4 align-items-center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-12 offset-md-4 ">
+                <h6 class="white mx-2 mb-3 mt-0 pt-5 text-center front d-block">Custom Tour Information</h6>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-12 offset-md-2 ">
+
+                <form id="bookForm" onsubmit="return false" action="/mail/custom" method="post">
+                    <div class="form-row mt-4">
+                        <div class="col-sm-6 pb-3">
+                            <label for="exampleAccount">Name</label>
+                            <input class="form-control" type="text" name="name" id="inputname" placeholder="">
+                        </div>
+                        <div class="col-sm-6 pb-3">
+                            <label for="exampleAccount">Surname</label>
+                            <input class="form-control" type="text" name="surname" id="inputsurname" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-sm-12 pb-3">
+                            <label for="exampleAccount">E-Mail</label>
+                            <input class="form-control" type="text" id="inputmail" name="email" placeholder="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-sm-6 pb-3">
+                            <label style="font-size:12px;" for="exampleAccount">Arrival Date</label>
+                            <input class="form-control" type="date" name="arrivaldate">
+                        </div>
+                        <div class="col-sm-6 pb-3">
+                            <label style="font-size:12px;" for="exampleAccount">Departure Date</label>
+                            <input class="form-control" type="date" name="departuredate">
+                        </div>
+                        <div class="col-sm-6 pb-3">
+                            <label style="font-size:12px;" for="exampleCtrl">Adult</label>
+                            <input type="text" class="form-control" id="exampleCtrl" name="adult" placeholder="E.g. 2">
+                        </div>
+                        <div class="col-sm-6 pb-3">
+                            <label style="font-size:12px;" for="exampleCtrl">Children</label>
+                            <input type="text" class="form-control" id="exampleCtrl" name="children"
+                                placeholder="E.g. 3">
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="col-md-4 col-12 offset-md-0 ">
+
+                <div class="form-row mt-4">
+
+
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Istanbul</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="istanbul"
+                            placeholder="E.g. 3">
+
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Cappadocia</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="cappadocia"
+                            placeholder="E.g. 3">
+
+                    </div>
+
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Ephesus</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="ephesus"
+                            placeholder="E.g. 3">
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Pamukkale</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="pamukkale"
+                            placeholder="E.g. 3">
+
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Fethiye</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="fethiye"
+                            placeholder="E.g. 3">
+
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Gallipoli</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="gallipoli"
+                            placeholder="E.g. 3">
+
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Troy</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="troy" placeholder="E.g. 3">
+
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Konya</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="konya" placeholder="E.g. 3">
+
+                    </div>
+
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Eastern</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="eastern"
+                            placeholder="E.g. 3">
+
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Black Sea</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="blacksea" placeholder="E.g. 3">
+
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Urfa</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="urfa" placeholder="E.g. 3">
+
+                    </div>
+                    <div class="col-sm-3 pb-3">
+
+                        <label id="destinationLabel" for="exampleAccount">Gaziantep</label>
+                        <input type="checkbox" class="form-control" id="exampleCtrl" name="gaziantep"
+                            placeholder="E.g. 3">
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-12 pb-3">
+                        <label for="comment">Extra Messages</label>
+                        <textarea class="form-control" name="message" rows="5" id="comment"></textarea>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- <div class="form-group">
+                        <button type="submit" id="submitbtn" class="btn col-sm-12 my-2 btn-primary">Send Form</button>
+                    </div>-->
+
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-12 offset-md-4 ">
+                <button type="submit" id="submitbtn" class="btn col-sm-12 my-2 btn-primary">
+                    <div id="spin"></div>Send Form
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{{>footer}}
+<!-- Footer -->
+
+<!-- End of Footer -->
+
+<script>
+    $(function () {
+        $('#submitbtn').on('click', function () {
+            var spin = document.getElementById('spin');
+
+            var frm = $('form');
+            var mailFlag = 1;
+            var emailValue = document.getElementById("inputmail").value;
+            var nameValue = document.getElementById("inputname").value;
+            var surnameValue = document.getElementById("inputsurname").value;
+
+            var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            var mailFlag = 1;
+            if (nameValue.length == 0) {
+                alert("name is not valid");
+                return;
+            }
+            if (surnameValue.length == 0) {
+                alert("surname is not valid");
+                return;
+            }
+            if (!regexEmail.test(emailValue)) {
+                alert("mail is not valid");
+                mailFlag = 0;
+            }
+
+            if (mailFlag) {
+                spin.classList.add("ld");
+                spin.classList.add("ld-ring");
+                spin.classList.add("ld-spin");
+                $.ajax({
+                    type: frm.attr('method'),
+                    url: frm.attr('action'),
+                    data: frm.serialize(),
+                    success: function (data) {
+                        alert('THANKS A LOT FOR SENDING EMAIL TO US. OUR TEAM WILL GET BACK TO YOU WITHIN 24 HOURS');
+                        spin.classList.remove("ld");
+                        spin.classList.remove("ld-ring");
+                        spin.classList.remove("ld-spin");
+                    },
+                    error: function (err) {
+                        alert('System does not allow sending emails with this frequency.')
+                    }
+                });
+            }
+
+
+
+        });
+    });
+</script>

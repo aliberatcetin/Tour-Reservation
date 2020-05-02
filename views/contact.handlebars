@@ -1,0 +1,190 @@
+<div class="tour-title not-fixed ">
+
+    <img class="w-100 h-100" src="assets/images/contact-us.png" alt="">
+    <h1 class="white text-center front shadow-text center-text"></h1>
+    <img class="curve2 front" src="assets/svgs/curvegrey.svg" alt="">
+
+</div>
+<!-- End section 1-->
+
+
+
+<!-- Section 2 about us-->
+
+<section id="pagesection">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12 order-md-first order-last">
+
+                <form id="contact-form" onsubmit="return false" action="/mail/contact" method="post">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group text-center">
+                                    <label for="form_name">First name *</label>
+                                    <input type="text" name="inputname" id="inputname" class="form-control"
+                                        placeholder="Please enter your first name *" required="required"
+                                        data-error="Firstname is required.">
+                                    <div class="help-block with-errors tiny mt-2"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group text-center">
+                                    <label for="form_lastname">Last name *</label>
+                                    <input type="text" id="inputsurname" name="surname" class="form-control"
+                                        placeholder="Please enter your last name *" required="required"
+                                        data-error="Lastname is required.">
+                                    <div class="help-block with-errors tiny mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group text-center">
+                                    <label for="form_email">Email *</label>
+                                    <input type="email" id="inputmail" name="email" class="form-control"
+                                        placeholder="Please enter your email *" required="required"
+                                        data-error="Valid email is required.">
+                                    <div class="help-block with-errors tiny mt-2"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group text-center">
+                                    <label for="form_phone">Phone</label>
+                                    <input id="form_phone" type="tel" name="phone" class="form-control"
+                                        placeholder="Phone with country code">
+                                    <div class="help-block with-errors tiny mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group text-center">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="inputmessage" name="message" class="form-control"
+                                        placeholder="Where would you like to travel?" rows="4" required="required"
+                                        data-error="Please,leave us a message."></textarea>
+                                    <div class="help-block with-errors tiny mt-2"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" id="submitbtn" class="btn col-sm-4 my-2 btn-primary"><div id="spin"></div>Send
+                                    Form</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mt-4">
+                                <p style="font-family: serif; font-size:20px; color:red;"><strong>*</strong> These
+                                    fields are required.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="col-md-5 col-12 mb-5 text-left">
+                <h3 class="black bold front mb-2 mt-2 ">Do not hesitate to<br> contact us</h3>
+                <h5 class="primary-color section-title mb-3">24 hours available</h5>
+                <div class="separator"></div>
+                <p class=" text-block">Mobile : (+90) 545 231 1504 (available on Whatsapp)<br>Email&nbsp&nbsp&nbsp :
+                    <span style="color:#3790cc;">reservationsptt@gmail.com</span> </p>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center  col-10 offset-1 mt-5">
+                <div class="text-center white-popup">
+
+                    <a
+                        href="https://www.tripadvisor.com/Attraction_Review-g297983-d15619727-Reviews-Guided_Cappadocia_Tours-Goreme_Cappadocia.html">
+                        <image style="width:100px;height:100px;" src="/assets/images/triplogo2.png"></image>
+                    </a> &nbsp;
+
+                    <a
+                        href="https://www.tripadvisor.com/Attraction_Review-g297983-d15619727-Reviews-Guided_Cappadocia_Tours-Goreme_Cappadocia.html">
+                        <image style="width:76px;height:100px;" src="/assets/images/getyourguideloco.png"></image>
+                    </a> &nbsp;
+
+                    <a
+                        href="https://www.tripadvisor.com/Attraction_Review-g297983-d15619727-Reviews-Guided_Cappadocia_Tours-Goreme_Cappadocia.html">
+                        <image style="width:100px;height:100px;" src="/assets/images/vialogo.jpg"></image>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map-fullwidth">
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var uluru = { lat: 38.646234, lng: 34.830944 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+
+        $('#submitbtn').on('click', function () {
+            var frm = $('form');
+            console.log(frm);
+            var mailFlag = 1;
+            var emailValue = document.getElementById("inputmail").value;
+            var nameValue = document.getElementById("inputname").value;
+            var surnameValue = document.getElementById("inputsurname").value;
+            var text = document.getElementById("inputmessage").value;
+            var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            var mailFlag = 1;
+            if (nameValue.length == 0 || surnameValue.length == 0 || text.length == 0) {
+                mailFlag = 0;
+            }
+
+            if (!regexEmail.test(emailValue)) {
+                alert("mail is not valid");
+                mailFlag = 0;
+            }
+
+            if (mailFlag) {
+                spin.classList.add("ld");
+                spin.classList.add("ld-ring");
+                spin.classList.add("ld-spin");
+                $.ajax({
+                    type: frm.attr('method'),
+                    url: frm.attr('action'),
+                    data: frm.serialize(),
+                    success: function (data) {
+                        alert('THANKS A LOT WE GOT YOUR EMAIL. WE WILL CONTACT YOU SOON.');
+                        spin.classList.remove("ld");
+                        spin.classList.remove("ld-ring");
+                        spin.classList.remove("ld-spin");
+                    },
+                    error: function (err) {
+                        alert('System does not allow sending emails with this frequency.')
+                    }
+                });
+            }
+        });
+
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX6LW8_BIKXNVzx205L88xRdjfaf5dpfg&callback=initMap">
+        </script>
+</section>
+
+
+
+<!-- Footer -->
+{{>footer}}

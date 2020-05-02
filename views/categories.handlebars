@@ -1,0 +1,38 @@
+<div class="tour-title not-fixed center-image">
+            
+            <img class="w-100 h-100" src="assets/images/destinations.jpg" alt="">
+            <h1 class="white text-center front shadow-text center-text">
+                {{#if display}}
+                    {{#with display}}{{destinations}} {{/with}}
+                {{else}}
+                    All Destinations
+                {{/if}}
+                
+
+                </h1>  
+            <img class="curve2 front" src="assets/svgs/curve.svg" alt="">
+    
+        </div>
+         <!-- End section 1-->
+
+        <section id="section3">                 
+            <div class="container-fluid">
+                <div class="row">
+                    {{#each categories}}               
+                    <div class="col-lg-3 col-sm-6 col-xs-12 mb-4 complete-image">
+                        <a target="_self" class="" href="/tours/{{name}}" target="_blank">
+                            <div class="destination-item">
+                                <img src="assets/images/{{imageUrl}}" class="img-fluid destination-item" alt="costarica" >
+                                <h6 class="white front">{{displayName}}</h6>              
+                            </div>
+                        </a>                
+                    </div>
+                    {{/each}}
+                </div>     
+            </div>
+        </section><!-- End section 2 Destinations-->
+     
+ 
+
+        <!-- Footer -->
+        {{>footer}}
