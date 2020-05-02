@@ -1,0 +1,510 @@
+{{#with tour}}
+<div class="tour-title">
+    <img class="w-100 h-100" src="assets/images/{{thumbnailImage}}" alt="">
+    <!--amsterdamtitle.jpg-->
+    <h1 class="white text-center shadow-text center-text">{{displayName}}</h1>
+    
+
+    <div>
+        <a class="smooth-scroll" href="#read-tour">
+            <img class="curvechevron" src="assets/svgs/curvesingle.svg" alt="">
+            <div class="chevroncurve">
+                <i class="fas  hoverchevron white fa-chevron-down"></i>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- End section 1-->
+
+<section id="section3" class="tour-list-sidebar tour-list-sidebar-2-col">
+
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-3 ml-lg-5 ml-sm-3 order-lg-first order-last mt-3 mt-lg-0">
+
+                <div class="mb-lg-3 mb-4 mt-lg-0 mt-4 text-center">
+                    <a href="#gallery-1" role="button" class="btn-gallery mb-2 d-lg-inline-block d-block">
+                        <span id="btnFA" class="btn btn-outline-danger pt-2 mr-1  px-3">
+                            View Gallery
+                            <i class="ml-2 fas fa-images"></i>
+                        </span>
+                    </a>
+                    <div id="gallery-1" class="hidden">
+                        {{#each imageGallery}}
+                        <a href="assets/images/{{this}}">Image 1</a>
+                        {{/each}}
+                    </div>
+
+                    <a href="#test-popup" role="button" class="open-popup-link d-lg-inline-block d-block">
+                        <span id="btnFA2" class="btn btn-outline-danger pt-2 px-3 ">
+                            Share Tour
+                            <i class="ml-2 fas fa-share-alt"></i>
+                        </span>
+                    </a>
+
+                    <div id="test-popup" class="white-popup mfp-hide text-center">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://uxithemes.com/Turbino"
+                            target="_blank">
+                            <i class="fab fa-facebook-f"></i></a> &nbsp;
+
+                        <a href="https://twitter.com/intent/tweet?text=Uxithemes&url=http%3A%2F%2Fwww.uxithemes.com/Turbino"
+                            target="_blank">
+                            <i class="fab fa-twitter"></i></a>&nbsp;
+
+                        <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.uxithemes.com%2FTurbino">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+
+                        <a href="mailto:support@uxithemes.com">
+                            <i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="form-container px-3 py-3">
+
+                    <h4 class="black bold mt-3 px-4 pb-2 text-center">Book this tour</h4>
+
+                    <form id="sidebar-form" id="bookForm" onsubmit="return false" action="/mail" method="post"
+                        class="px-xl-3 px-lg-3 px-3">
+
+                        <div class="form-group text-center">
+                            <label class="" for="inputname">Your Name</label>
+                            <input type="text" class="form-control" name="name" id="inputname" placeholder="Name"
+                                required>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label class="" for="inputmail">Email Adress</label>
+                            <input type="text" class="form-control" name="email" id="inputmail" placeholder="Email"
+                                required>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label class="" for="inputmail">Number of Guests</label>
+                            <input type="text" class="form-control" name="guests" id="inputmail" placeholder="Number of Guests"
+                                >
+                        </div>
+                        <div class="form-group text-center">
+                            <label class="" for="inputmail">Tour Date</label>
+                            <input type="date" class="form-control" name="tourdate" id="inputmail" placeholder="Number of Guests"
+                                >
+                        </div>
+                        <div class="form-group text-center">
+                            <label class="" for="inputmail">Phone</label>
+                            <input type="text" class="form-control" name="phone" id="inputphone" placeholder="Phone"
+                                required>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label for="exampleFormControlTextarea1">Your Special Request</label>
+                            <textarea class="form-control" name="text" placeholder="Write a detailed information"
+                                id="inputtext" rows="3" ></textarea>
+                        </div>
+                        <!--
+                                    <div class="form-group text-center">
+                                        <label class="text-center" for="inputtours">Tour Interested In</label>
+                                        <input type="text" class="form-control" id="inputtours" placeholder="Mystical Machu Picchu">
+                                    </div>-->
+
+                        <!-- <div class="form-group text-center departure">
+                            <label class="" for="datepicker">Departure Date</label>
+                            <div class="input-group">
+                                <input type="text" id="datepicker" placeholder="Choose your Date" class="form-control">
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fas fa-calendar"></i> </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <button type="submit" id="submitbtn" class="btn col-sm-12 my-2 btn-primary">
+                                    <div id="spin"></div>Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="more-info mx-auto my-4">
+                    <h6 class="black semibold text-center mx-4 mt-3 mb-3 info-title">Quick Contact</h6>
+                    <div class="pb-2">
+
+                        <a href="tel:+133331111">
+                            <h5 class="grey text-center tel-info"><i
+                                    class="fas primary-color fa-phone faa-tada animated mr-2 grey my-lg-0 mb-1"></i>(+90)
+                                545 231 15 04</h5>
+                        </a>
+                        <a href="mailto:reservationsptt@gmail.com">
+                            <h5 class="grey text-center mail-info"><i
+                                    class="fas fa-envelope faa-horizontal animated primary-color mr-2"></i>reservationsptt@gmail.com
+                            </h5>
+                        </a>
+                    </div>
+                </div>
+
+              
+            </div>
+
+            <div class="col-xs-12 col-md-12 col-lg-8   single-tour">
+                <h4 id="read-tour" class="black text-left mb-3  bold">{{displayName}}</h4>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-sm-4 col-12 text-left">
+                        <h6 class="primary-color semibold price-big">{{price}}<span class="semibold subtitle">&nbsp;/
+                                {{pricingtype}}</span> </h6>
+                    </div>
+
+                    <div class="col-sm-6 col-12 text-left ml-sm-0">
+                        <div class=" ml-0 mt-1">
+                            {{#each labels}}
+                            <a class="btn btn-primary px-3  text-left mr-1 mb-1 btn-sm" href="#"
+                                role="button">{{this}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="separator-tour"></div>
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-6 order-2 order-lg-2">
+                        <img class="svgcenter mt-2 mb-2 duration-icon" src="assets/svgs/duration.svg" alt="">
+                    </div>
+                    <div class="col-lg-6 col-6 order-5 order-lg-3">
+                        <img class="svgcenter mb-2 location-icon" src="assets/svgs/location.svg" alt="">
+                    </div>
+
+
+                    <div class="col-lg-6 col-6 order-4 order-lg-6">
+                        <p class="grey text-center">Duration<br><span
+                                class="black bold">{{numerical}}{{duration}}</span></p>
+                    </div>
+                    <div class="col-lg-6 col-6 order-7 order-lg-7">
+                        <p class="grey text-center">Location<br><span class="black bold">{{location}}</span></p>
+                    </div>
+
+
+                </div>
+
+                <div class="separator-tour"></div>
+
+                <ul class="single-tour-container">
+                    <!--<li>
+                                    <div class="tour-item-title list-font">Departure</div>
+                                    <div class="tour-item-description list-font">Los Angeles International Airport</div>
+                                </li>
+                                
+                                <li>
+                                    <div class="tour-item-title list-font">Next Departure</div>
+                                    <div class="tour-item-description list-font">Sunday 14 of May, 20:30 hs</div>
+                                </li>-->
+
+
+                    <li>
+                        <div class="tour-item-title list-font">Highlights </div>
+                        <div class="tour-item-description list-font">
+                            {{#each highlights}}
+                            <div><i class="fas fa-dot-circle"></i>{{this}}</div>
+                            {{/each}}
+                            <!-- <div><i class="fas fa-check-circle"></i>Travel Insurance</div>
+                                        <div><i class="fas fa-check-circle"></i>Non-stop flight to Amsterdam</div>
+                                        <div><i class="fas fa-check-circle"></i>Two days long City tour</div>
+                                        <div><i class="fas fa-check-circle"></i>Anne Frank Museum ticket	</div>   -->
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="tour-item-title list-font">What´s Included </div>
+                        <div class="tour-item-description list-font">
+                            {{#each inclusions}}
+                            <div><i class="fas fa-check-circle"></i>{{this}}</div>
+                            {{/each}}
+                            <!-- <div><i class="fas fa-check-circle"></i>Travel Insurance</div>
+                                        <div><i class="fas fa-check-circle"></i>Non-stop flight to Amsterdam</div>
+                                        <div><i class="fas fa-check-circle"></i>Two days long City tour</div>
+                                        <div><i class="fas fa-check-circle"></i>Anne Frank Museum ticket	</div>   -->
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="tour-item-title list-font">Not Included</div>
+                        <div class="tour-item-description list-font">
+                            {{#each exclusions}}
+                            <div> <i class="fas fa-times-circle"></i>{{this}}</div>
+
+                            {{/each}}
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class="">
+                    <div class="tour-schedule">
+                        <p style="visibility:hidden;" id="tourId">{{_id}}</p>
+
+                        <h6 class="black bold mt-4 mb-3">Itinerary</h6>
+                        <!--<h6 class="black bold mt-4 mb-3">Itinerary</h6>
+
+                                    <p>Spend your first day in Amsterdam getting to know the lay of the land and looking at the city’s rich history.</p> 
+
+                                    <div class="list-font semibold mt-3">Cruise the canals</div>     
+
+                                    <p>A canal cruise is a great way to get acquainted with the city. During your trip, you can also jot down a few places 
+                                    that you might want to visit later. A few of the most notable canal cruise operators include Lovers, Canal and Holland International.</p> 
+
+                                    <div class="list-font semibold mt-3">Rent a Bike</div>  
+
+                                    <p>It’s time to start exploring on your own. Go to a reputable bike rental shop like MacBike or Yellow Bike and hire Amsterdam’s preferred form of transportation for 24 hours or more.</p>
+
+                                    <img class="img-fluid my-3" src="assets/images/netherlands2.jpg" alt="">
+
+                                    <h6 class="black bold mt-5 mb-3">Amsterdam, the Perfect Schedule: 2nd Week</h6>
+
+                                    <p>After your canal cruise, walk to the Amsterdam Museum and delve into 800 years of local history. Once you’re done, walk around the corner to the Spuiplein and enter the Begijnhof 
+                                        through a barely noticeable door. Take a peaceful stroll around this courtyard -- once home to the faithful Beguine order.</p>    
+
+                                    <div class="list-font semibold mt-3">Cruise the canals</div>     
+
+                                    <p>A canal cruise is a great way to get acquainted with the city. During your trip, you can also jot down a few places 
+                                    that you might want to visit later. A few of the most notable canal cruise operators include Lovers, Canal and Holland International.</p> 
+
+                                    <img class="img-fluid my-3" src="assets/images/amsterdam3.jpg" alt="">
+
+                                    <div class="list-font semibold mt-3">Drink with a Touch of Glass</div>  
+
+                                    <p>Finish your day at one of Amsterdam’s best cocktail bars – both the ingredients are the creative presentations are sure to impress. </p>
+
+
+                                    <div class="list-font semibold mt-3">A night on Town</div>  
+                                
+                                    <p>If you’ve still got energy to spare, treat yourself to a night out at one of Amsterdam's many bars and clubs. If you’d prefer a concert,
+                                        play or dance performance, visit the Last Minute Ticket Shop (open daily 10:00 – 17:00) and spontaneously pick a show at up to 50% off.</p>
+                                    -->
+                        {{{itinerary}}}
+                    </div>
+                </div>
+
+
+                <!--<div class="comments-container">
+                                <h6 class="bold mt-5 black">Tour Reviews </h6>
+
+                                <ul id="comments-list" class="comments-list">
+                                    <li>
+                                        <div class="comment-main-level mb-4">
+                                     
+                                            <div class="comment-avatar d-none d-md-block"><img src="assets/images/chadblog.jpg" alt=""></div>
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name "><a href="#">Chad Guideaur</a></h6>
+                                                    <div class="text-left"> 
+                                                        <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>  <i class="fas fa-star"></i> 
+                                                        <br class="hidebr">
+                                                        <span class="time-review">3 hours ago</span>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="comment-content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipising elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                        
+                                    <li>
+                                        <div class="comment-main-level">
+                                            <div class="comment-avatar  d-none d-md-block"><img src="assets/images/chadblog.jpg" alt=""></div>
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="#">Chad Guideaur</a></h6>
+                                                    <div class="text-left"> 
+                                                        <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>  <i class="fas fa-star"></i> 
+                                                        <br class="hidebr">
+                                                        <span class="time-review text-left">3 hours ago</span>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="comment-content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="mt-5  mx-auto my-auto">
+                                <h6 class="black bold mt-5 ml-md-0 ml-4 text-center">Leave a Review</h6>
+                                <form class="form-comment ratings pt-2 ">
+                                    <div class="row ">
+                                        <div class="col-md-6 col-12 text-center">
+                                                <label  for="inputname2">Your Name</label>
+                                        <input type="text" id="inputname2" class="form-control mb-3" placeholder="John Doe">
+                                        </div>
+                                        <div class="col-md-6 col-12  text-center">
+                                                <label for="inputemail2">Email Adress</label>
+                                        <input type="text" class="form-control" id="inputemail2" placeholder="Johndoe@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6 col-12 text-center">
+                                                <label  for="inlineFormInputName32">Rating</label>
+
+                                            <div class="input-group">
+                                                <select class="form-control" id="inlineFormInputName32">
+                                                    <option selected>4 Stars (Very Good)</option>
+                                                    <option value="1">1 Star (Bad)</option>
+                                                    <option value="2">2 Stars</option>
+                                                    <option value="3">3 Stars (Regular)</option>
+                                                    <option value="3">5 Stars (Superb)</option>
+                                                </select>
+                                                    <div class="input-group-append">
+                                                    <div class="input-group-text"><i class="fas fa-chevron-down"></i>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    
+                                    </div>
+                                             
+                                    <div class="row mt-3">
+                                        <div class="col-12 ">
+                                            <div class="form-group text-center">
+                                                <label for="exampleFormControlTextarea1">Additional comments</label>
+                                                <textarea class="form-control" placeholder="Write a detailed review" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 offset-lg-3 col-12">
+                                            <button type="submit" class="btn col-sm-12 my-2 btn-primary mb-lg-0 mb-4">Submit review</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>-->
+
+
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    {{#if imageGallery}}
+                    <h4 class="text-center mb-5 mt-5">Image Gallery</h4>
+                    {{/if }}
+                    <div class="cardHolder album">
+
+                        {{#each imageGallery}}
+                        <a href="assets/images/{{this}}" class="image-link card-grid-popup">
+                            <img oncontextmenu="myFunction(this);return false;" class="card-grid-popup2"
+                                src="assets/images/{{this}}" alt="" />
+                        </a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- Footer -->
+{{>footer}}
+<!-- End of Footer -->
+
+{{/with}}
+
+<style>
+    div p {
+        word-wrap: break-word;
+    }
+</style>
+
+
+<script>
+
+    /* var frm = $('#bookForm');
+     frm.submit(function (ev) {
+         $.ajax({
+             type: frm.attr('method'),
+             url: frm.attr('action'),
+             data: frm.serialize(),
+             success: function (data) {
+                 alert('ok');
+             }
+         });
+ 
+         ev.preventDefault();
+     });*/
+    function myFunction(d) {
+        var hello = d.src.split("/").pop();
+        var tourId=document.getElementById("tourId").innerHTML;
+        //var tourId = window.location.pathname.split("/").pop();
+        var imgData = "imageId=" + hello;
+        $.ajax({
+            type: 'POST',
+            url: '/tours/delete/' + tourId,
+            data: imgData,
+            success: function (data) {
+                location.reload();
+            }
+        });
+    }
+    $(function () {
+        $('#submitbtn').on('click', function () {
+            var frm = $('form');
+            var formData = frm.serialize() + "&sitelocation=" + window.location.href
+            var emailValue = document.getElementById("inputmail").value;
+            var nameValue = document.getElementById("inputname").value;
+            var textValue = document.getElementById("inputtext").value;
+            var phoneValue = document.getElementById("inputphone").value;
+            var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            var mailFlag = 1;
+            if (!regexEmail.test(emailValue)) {
+                alert("mail is not valid");
+                mailFlag = 0;
+            }
+            if (nameValue.length == 0) {
+                mailFlag = 0;
+            }
+            if (phoneValue.length == 0) {
+                mailFlag = 0;
+            }
+            if (mailFlag) {
+                spin.classList.add("ld");
+                spin.classList.add("ld-ring");
+                spin.classList.add("ld-spin");
+                $.ajax({
+                    type: frm.attr('method'),
+                    url: frm.attr('action'),
+                    data: formData,
+                    success: function (data) {
+                        alert('Thanks a lot for booking with us. Our team will contact you within 24 hours.');
+                        spin.classList.remove("ld");
+                        spin.classList.remove("ld-ring");
+                        spin.classList.remove("ld-spin");
+                    },
+                    error: function (err) {
+                        alert('System does not allow sending emails with this frequency.')
+                    }
+                });
+            }
+
+
+
+        });
+    });
+
+
+</script>

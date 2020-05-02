@@ -1,0 +1,264 @@
+<div class="tour-title not-fixed center-image">
+    <img class="w-100 h-100" src="assets/images/alltours.jpg" alt="">
+    <h1 class="white text-center front shadow-text center-text">
+        {{#if display}}
+            {{#with display}}{{alltours}} {{/with}}
+        {{else}}
+            All Tours
+        {{/if}} 
+        </h1>
+    <img class="curve2 front" src="assets/svgs/curve.svg" alt="">
+</div>
+<!-- End section 1-->
+
+<!-- Section 3 Tours-->
+
+<section id="section3" class="tour-list-sidebar tour-search-3-cols-card">
+    <div class="container-fluid">
+        
+        <div class="row">
+            {{#each tours}}
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="card mb-4">
+                    <a class="img-card" href="/tours/{{categoryName}}/{{name}}">
+                        <small class="white front tiny"><span class="far fa-clock mr-2 white"></span>{{numerical}}<br>{{duration}}</small>
+                      <!--  <div class="review-card"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star-half"></i> <span class="tiny white">2
+                                reviews</span></div>-->
+                        <div class="bottom-tour-background"></div>
+                        <img src="assets/images/{{thumbnailImage}}" alt="" />
+                    </a>
+                    <div class="card-content">
+                        <div class="row align-items-center">
+                            <div class="col-7">
+                                <h6 class="black mb-2"><a href="/tours/{{categoryName}}/{{name}}">{{displayName}}</a></h6>
+                            </div>
+                            <div class="col-5 align-middle">
+                                <h6 class="primary-color text-right ">{{price}}</h6>
+                            </div>
+                            <div>
+                                {{#each labels}}
+                                <a class="btn btn-primary px-3 ml-3 mr-1 my-1 btn-sm float-left" href="#" role="button">{{this}}</a>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {{#if @last}} 
+                    <div class="row mb-lg-0 mb-4 float-right">
+                    <div class="col-12 mt-3">
+                        <div class='pagination'>
+                            <div class='current'>
+                                <h6>1</h6>
+                            </div>
+                            <a class="" href="#">
+                                <h6>2</h6>
+                            </a>
+                            <a href="#">
+                                <h6>3</h6>
+                            </a>
+                            <a href="#">
+                                <h6 class="arrow-offset">›</h6>
+                            </a>
+                            <a href="#">
+                                <h6 class="arrow-offset">»</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+
+
+
+
+            </div>
+            {{/each}}
+
+
+
+
+        </div>
+
+
+        <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="card mb-4">
+                    <a class="img-card" href="#">
+                        <small class="white front tiny"><span class="far fa-clock mr-2 white"></span>1<br>day</small>
+                        <div class="review-card"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star-half"></i> <span class="tiny white">2
+                                reviews</span></div>
+                        <div class="bottom-tour-background"></div>
+                        <img src="assets/images/cubasmall.jpg" alt="" />
+                    </a>
+                    <div class="card-content">
+                        <div class="row align-items-center">
+                            <div class="col-7">
+                                <h6 class="black mb-2"><a href="#" target="_blank">Dream the Bahamas</a></h6>
+                            </div>
+                            <div class="col-5 align-middle">
+                                <h6 class="primary-color text-right ">$2900</h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-primary px-3 ml-3 mr-1 my-1 btn-sm float-left" href="#" role="button">vacation</a><a
+                                    class="btn btn-primary mx-1 px-3 mx-2 my-1 btn-sm float-left" href="#" role="button">travel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <a class="img-card" href="#">
+                        <small class="white front tiny"><span class="far fa-clock mr-2 white"></span>9<br>days</small>
+                        <div class="review-card"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star-half"></i> <span class="tiny white">2
+                                reviews</span></div>
+                        <div class="bottom-tour-background"></div>
+                        <img src="assets/images/netherlandsmall.jpg" alt="" />
+                    </a>
+                    <div class="card-content">
+                        <div class="row align-items-center">
+                            <div class="col-7">
+                                <h6 class="black mb-2"><a href="#" target="_blank">Amsterdam with love </a></h6>
+                            </div>
+                            <div class="col-5 align-middle">
+                                <h6 class="primary-color text-right ">$1900</h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-primary px-3 ml-3 mr-1 my-1 btn-sm float-left" href="#" role="button">Romantic</a><a
+                                    class="btn btn-primary mx-1 px-3 mx-2 my-1 btn-sm float-left" href="#" role="button">vacation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <a class="img-card" href="#">
+                        <small class="white front tiny"><span class="far fa-clock mr-2 white"></span>1<br>day</small>
+                        <div class="review-card"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star-half"></i> <span class="tiny white">2
+                                reviews</span></div>
+                        <div class="bottom-tour-background"></div>
+                        <img src="assets/images/valicoloradosmall.jpg" alt="" />
+                    </a>
+                    <div class="card-content">
+                        <div class="row align-items-center">
+                            <div class="col-7">
+                                <h6 class="black mb-2"><a href="#" target="_blank">Vail Ski Resort</a></h6>
+                            </div>
+                            <div class="col-5 align-middle">
+                                <h6 class="primary-color text-right">$2900</h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-primary px-3 ml-3 mr-1 my-1 btn-sm float-left" href="#" role="button">adventure</a><a
+                                    class="btn btn-primary mx-1 px-3 mx-2 my-1 btn-sm float-left" href="#" role="button">sports</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="card mb-4">
+                    <a class="img-card" href="#">
+                        <small class="white front tiny"><span class="far fa-clock mr-2 white"></span>7<br>days</small>
+                        <div class="review-card"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star-half"></i> <span class="tiny white">2
+                                reviews</span></div>
+                        <div class="bottom-tour-background"></div>
+                        <img src="assets/images/parissmall.jpg" alt="" />
+                    </a>
+                    <div class="card-content">
+                        <div class="row align-items-center">
+                            <div class="col-7">
+                                <h6 class="black mb-2"><a href="#" target="_blank">Midnight in Paris </a></h6>
+                            </div>
+                            <div class="col-5 align-middle">
+                                <h6 class="primary-color text-right ">$2900</h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-primary px-3 ml-3 mr-1 my-1 btn-sm float-left" href="#" role="button">romantic</a><a
+                                    class="btn btn-primary mx-1 px-3 mx-2 my-1 btn-sm float-left" href="#" role="button">travel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <a class="img-card" href="#">
+                        <small class="white front tiny"><span class="far fa-clock mr-2 white"></span>8<br>days</small>
+                        <div class="review-card"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star-half"></i> <span class="tiny white">2
+                                reviews</span></div>
+                        <div class="bottom-tour-background"></div>
+                        <img src="assets/images/patagoniasmall.jpg" alt="" />
+                    </a>
+                    <div class="card-content">
+                        <div class="row align-items-center">
+                            <div class="col-7">
+                                <h6 class="black mb-2"><a href="#" target="_blank">Vast Patagonias </a></h6>
+                            </div>
+                            <div class="col-5 align-middle">
+                                <h6 class="primary-color text-right ">$1900</h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-primary px-3 ml-3 mr-1 my-1 btn-sm float-left" href="#" role="button">adventure</a><a
+                                    class="btn btn-primary mx-1 px-3 mx-2 my-1 btn-sm float-left" href="#" role="button">travel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-2 mb-lg-4">
+                    <a class="img-card" href="#">
+                        <small class="white front tiny"><span class="far fa-clock mr-2 white"></span>7<br>days</small>
+                        <div class="review-card"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star-half"></i> <span class="tiny white">2
+                                reviews</span></div>
+                        <div class="bottom-tour-background"></div>
+                        <img src="assets/images/costarica.jpg" alt="" />
+                    </a>
+                    <div class="card-content">
+                        <div class="row align-items-center">
+                            <div class="col-7">
+                                <h6 class="black mb-2"><a href="#" target="_blank">Surf Santa Teresita </a></h6>
+                            </div>
+                            <div class="col-5 align-middle">
+                                <h6 class="primary-color text-right ">$1900</h6>
+                            </div>
+                            <div>
+                                <a class="btn btn-primary px-3 ml-3 mr-1 my-1 btn-sm float-left" href="#" role="button">adventure</a><a
+                                    class="btn btn-primary mx-1 px-3 mx-2 my-1 btn-sm float-left" href="#" role="button">sports</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-lg-0 mb-4 float-right">
+                    <div class="col-12 mt-3">
+                        <div class='pagination'>
+                            <div class='current'>
+                                <h6>1</h6>
+                            </div>
+                            <a class="" href="#">
+                                <h6>2</h6>
+                            </a>
+                            <a href="#">
+                                <h6>3</h6>
+                            </a>
+                            <a href="#">
+                                <h6 class="arrow-offset">›</h6>
+                            </a>
+                            <a href="#">
+                                <h6 class="arrow-offset">»</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+    </div>
+
+
+
+</section><!-- End section 3 tours-->
+
+
+
+<!-- Footer -->
+{{>footer}}
+<!-- End of Footer -->

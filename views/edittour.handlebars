@@ -1,0 +1,472 @@
+{{>panelbuttons}}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="mb-5">
+            <div class="row">
+
+                <div class="col-md-6 offset-md-3">
+
+                    <span class="anchor" id="formRegister"></span>
+                    <hr class="mb-5">
+                    <div class="container">
+
+                        {{> _msg}} {{> _errors}}
+
+                    </div>
+
+                    <div class="card-outline-secondary">
+
+                        <div class="card-header">
+                            <h3 class="mb-0">Tour Information</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" method="post" id="editform" action="/tours/update"
+                                enctype="multipart/form-data">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Tour Name</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" id="tourName" type="text" name="name"
+                                            placeholder="Full name">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Category</label>
+                                    <div class="col-lg-9">
+                                        <select disabled id="category" name="category" class="form-control" size="0">
+                                            
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Inclusions</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="inc" name="inc"
+                                            placeholder="Seperate by comma">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Exclusions</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="exc" name="exc"
+                                            placeholder="Seperate by comma">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Highlights</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="high" name="high"
+                                            placeholder="Seperate by comma">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Labels</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="labels" name="labels"
+                                            placeholder="Seperate by comma">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Pricing Type</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="pricingtype" name="pricingtype"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Priority</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="priority" name="priority"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-row mt-4">
+                                    <div class="col-sm-3 pb-3">
+                                        <label for="exampleAccount">Numerical</label>
+                                        <input type="text" class="form-control" id="numerical" name="numerical"
+                                            placeholder="2">
+                                    </div>
+                                    <div class="col-sm-3 pb-3">
+                                        <label for="exampleAccount">Duration</label>
+                                        <input type="text" class="form-control" id="duration" name="duration"
+                                            placeholder="2 Weeks">
+                                    </div>
+                                    <div class="col-sm-3 pb-3">
+                                        <label for="exampleCtrl">Location</label>
+                                        <input type="text" class="form-control" id="location" name="location"
+                                            placeholder="Muş">
+                                    </div>
+                                    <div class="col-sm-3 pb-3">
+                                        <label for="exampleCtrl">Price</label>
+                                        <input type="text" class="form-control" id="price" name="price" placeholder="">
+                                    </div>
+                                </div>
+                                <!--<div class="form-group">
+                                    <input type="file" id="input-file-now" name="file" class="file-upload" />
+                                </div>-->
+                                <div class="form-row mt-4">
+                                    <div class="col-sm-6 pb-3">
+                                        <label for="exampleAccount">Thumbnail image</label>
+                                    </div>
+                                    <div class="col-sm-6 pb-3">
+                                        <input type="file" id="input-file-now" name="file" class="file-upload" />
+                                    </div>
+                                </div>
+                                <div class="form-row mt-4">
+                                    <div class="col-sm-6 pb-3">
+                                        <label for="exampleAccount">Add new images to gallery(optional)</label>
+                                    </div>
+                                    <div class="col-sm-6 pb-3">
+                                        <input type="file" id="files" name="files" multiple>
+                                        <div id="selectedFiles"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row mt-4">
+                                    <div class="col-sm-6 pb-3">
+                                        <label for="exampleAccount">Type</label>
+                                        <select id="type" name="type" class="form-control" size="0">
+                                            <option style="display:none"></option>
+                                            <option value="draft" name="category">draft</option>
+                                            <option value="stage" name="category">stage</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 pb-3">
+                                        <label for="exampleAccount">Popular</label>
+                                        <input type="checkbox" name="popular" id="switch" /><label id="switchLabel"
+                                            for="switch">Toggle</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea name="message2" id="summerNoteArea" class="form-control"></textarea>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg float-right">Register</button>
+                                </div>
+
+                            </form>
+                            <button onclick="deleteTour();" class="btn btn-danger btn-lg float-right">Delete</button>
+                            <button data-toggle="modal" data-target="#myModal"
+                                class="btn btn-info btn-lg float-right">Copy</button>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Copy Tour</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <select id="copycategories" name="copycategories" class="form-control"
+                                                size="0">
+                                                <option style="display:none"></option>
+
+                                            </select>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input id="newname" name="newname" class="form-control"
+                                                placeholder="new tour name">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                data-dismiss="modal">Close</button>
+                                            <button onclick="copy();" style="background:red;" type="button"
+                                                class="btn btn-default">Copy!</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- form card register -->
+
+                        <!-- /form card register -->
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!--/row-->
+
+            <br><br><br><br>
+
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>
+<!--/container-->
+<hr>
+<p class="text-center">The End.<br>
+    <a class="small text-info d-inline-block" href="https://www.codeply.com/bootstrap-4-examples">More Bootstrap 4
+        Examples</a>
+</p>
+
+</div>
+<!--/container-->
+
+<style>
+    .form-control {
+        background-color: lightgray;
+    }
+
+    .form-control:focus {
+        background-color: white;
+        color: black;
+    }
+</style>
+
+<script>
+    function copy() {
+        var frm = $('#editform');
+        var data = frm.serialize();
+        var tourName = document.getElementById("tourName").value;
+        var newName = document.getElementById("newname").value;
+        var copycat = document.getElementById("copycategories").value;
+        var currentCategory = document.getElementById("category").value;
+        var flag = 1;
+        if (copycat.length < 1 || newName.length < 1) {
+            flag = 0;
+            alert("girsene hacı bilgileri");
+            return;
+        }
+        console.log(currentCategory,copycat);
+        if( !copycat.localeCompare(currentCategory) ){
+            flag = 0;
+            alert("hacı aynı kategori giriyon farklı gir");
+            return;
+        }
+        if (flag) {
+            $.ajax({
+                type: 'GET',
+                url: '/tours/copy/' + tourName + '/' + newName + '/' + copycat,
+                success: function (data) {
+                    alert("kopyalandı");
+                },
+                error: function (request,status,error) {
+                    alert(request.responseText);
+                }
+            });
+        }
+
+    }
+    $(document).ready(function () {
+        //$('#summernote').summernote();
+        var id = window.location.pathname.split("/").pop();
+
+        document.getElementById("editform").action = document.getElementById("editform").action + "/" + id;
+
+        $('#summerNoteArea').summernote({
+            height: 150,
+            popover: {
+                image: [],
+                link: [],
+                air: []
+            }
+        });
+        //$("#summerNoteArea").summernote("code", "<h2>your text</h2>");
+    });
+
+    function deleteTour() {
+        var r = confirm("Do you want to delete?");
+        if (r == false) {
+            return;
+        }
+
+        var id = window.location.pathname.split("/").pop();
+        $.ajax({
+            type: 'GET',
+            url: '/tours/delete/' + id,
+            success: function (data) {
+                alert("tour deleted");
+                window.location.href = "/panel/alltours";
+            },
+            error: function (error) {
+                alert("fail");
+            }
+        });
+    }
+
+    $("document").ready(function () {
+        $("#hello").change(function () {
+            alert('changed!');
+            var frm = $('#selamlar');
+            var form = $('#selamlar')[0];
+            var data = new FormData(form);
+            $.ajax({
+                type: frm.attr('method'),
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                url: frm.attr('action'),
+                data: data,
+                success: function (data) {
+                    var insertImage = document.getElementById('insertImage').value = "/assets/images/" + data;
+                    document.getElementById('submitFile').disabled = false;
+                }
+            });
+        });
+    });
+
+    var tourObject;
+    $("document").ready(function () {
+
+        var k = window.location.pathname.split("/").pop();
+        $.ajax({
+            type: 'GET',
+            url: '/tours/find/' + k,
+            success: function (data) {
+                initializeEdit(data);
+            }
+        });
+
+
+    });
+
+    function initializeEdit(tourObject) {
+        $("#summerNoteArea").summernote("code", tourObject.itinerary);
+        document.getElementById('tourName').value = tourObject.displayName;
+
+        var inc = tourObject.inclusions.join();
+        var exc = tourObject.exclusions.join();
+        var high = tourObject.highlights.join();
+        var labels = tourObject.labels.join();
+
+        document.getElementById('inc').value = inc;
+        document.getElementById('high').value = high;
+        document.getElementById('labels').value = labels;
+        document.getElementById('exc').value = exc;
+        document.getElementById('duration').value = tourObject.duration;
+        document.getElementById('location').value = tourObject.location;
+        document.getElementById('pricingtype').value = tourObject.pricingtype;
+        var typeSelect = document.getElementById("type");
+        document.getElementById('price').value = tourObject.price;
+        document.getElementById('numerical').value = tourObject.numerical;
+        document.getElementById('priority').value = tourObject.priority;
+
+        console.log(tourObject);
+
+        var typeText;
+        if (tourObject.approved)
+            typeText = "stage";
+        else
+            typeText = "draft";
+
+        typeSelect.value = typeText;
+        var id = window.location.pathname.split("/").pop();
+
+        $.ajax({
+            type: 'GET',
+            url: '/categories/list/',
+            success: function (data) {
+                
+                var option;
+                var x = document.getElementById("category");
+                var copycategories = document.getElementById("copycategories");
+                console.log(copycategories);
+                for (var i = 0; i < data.length; i++) {
+                    option = document.createElement("option");
+                    option2 = document.createElement("option");
+                    option.text = data[i].name;
+                    option.value=data[i]._id;
+                    option2.text = data[i].name;
+                    option2.value = data[i]._id;
+                    x.add(option);
+                    copycategories.add(option2);
+                    console.log(data[i]._id);
+                    if (!data[i]._id.localeCompare(tourObject.category)) {
+                        x.value = data[i]._id;
+                    }
+                }
+                // x.value = tourObject.categoryName;
+                
+
+            }
+        });
+        document.getElementById("switch").checked = tourObject.popular;
+
+    }
+
+    var selDiv = "";
+
+    document.addEventListener("DOMContentLoaded", init, false);
+
+    function init() {
+        document.querySelector('#files').addEventListener('change', handleFileSelect, false);
+        selDiv = document.querySelector("#selectedFiles");
+    }
+
+    function handleFileSelect(e) {
+
+        if (!e.target.files) return;
+
+        selDiv.innerHTML = "";
+
+        var files = e.target.files;
+        for (var i = 0; i < files.length; i++) {
+            var f = files[i];
+            selDiv.innerHTML += f.name + "<br/>";
+        }
+
+    }
+
+
+</script>
+
+
+<style>
+    #switch {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    #switchLabel {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 70px;
+        height: 35px;
+        background: grey;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+    }
+
+    #switchLabel:after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 5px;
+        width: 33px;
+        height: 33px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+    }
+
+    #switch:checked+#switchLabel {
+        background: #bada55;
+    }
+
+    #switch:checked+#switchLabel:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+    }
+
+    #switchLabel:active:after {
+        width: 50px;
+    }
+</style>
