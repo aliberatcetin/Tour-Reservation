@@ -50,8 +50,8 @@ var transporter = nodemailer.createTransport({
     secure: false,
     requireTLS: true,
     auth: {
-        user: 'desoinnovation@gmail.com',
-        pass: 'asdzxc1122'
+        user: '',//env
+        pass: ''//env
     }
 });
 
@@ -59,8 +59,8 @@ var transporter = nodemailer.createTransport({
 
 router.post('/', function (req, res) {
     var mailOptions = {
-        from: 'desoinnovation@gmail.com',
-        to: 'reservationsptt@gmail.com',
+        from: '',//env
+        to: '', //env
         subject: 'New Mail On PTT',
         text: 'Guest Name:'+req.body.name +'\nNumber of Guests:'+req.body.guests+ '\nTour Date:'+ req.body.tourdate +'\nPhone:'+ req.body.phone+ '\nEmail:'+ req.body.email + '\nSpecial Request:'+ req.body.text
         +'\nSite Location:'+req.body.sitelocation
@@ -90,8 +90,8 @@ router.post('/custom', function (req, res) {
         + '\nDeparture Date:' + req.body.departuredate + '\nAdult:' + req.body.adult + '\nChildren:' + req.body.children
         + '\nSpecial Request:' + req.body.message + '\nCities:' + cities
     var mailOptions = {
-        from: 'desoinnovation@gmail.com',
-        to: 'reservationsptt@gmail.com',
+        from: '',//env
+        to: '',//env
         subject: 'Custom Made Tour Form',
         text: text
     };
@@ -113,8 +113,8 @@ router.post('/contact', function (req, res) {
     var text='Name:'+req.body.inputname+req.body.surname+'\nPhone:'+req.body.phone+'\nMessage:'+req.body.message
                     +'\nEmail:'+req.body.email
     var mailOptions = {
-        from: 'desoinnovation@gmail.com',
-        to: 'reservationsptt@gmail.com',
+        from: '',//env
+        to: '',//env
         subject: 'Contact Form',
         text: text
     };
